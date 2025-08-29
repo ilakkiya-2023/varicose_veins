@@ -1,38 +1,119 @@
-.App {
+/* Global resets and base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Headings */
+h2 {
+  color: #1e3a8a;
+}
+
+/* Form container (Login/Register/Profile) */
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-container button {
+  background-color: #1e3a8a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-container p {
   text-align: center;
+  color: #555;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Sidebar layout used globally */
+.main-layout {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar {
+  width: 220px;
+  background-color: #1e3a8a;
+  height: 100vh;
+  color: white;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar nav {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.sidebar a {
+  color: white;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Content area */
+.content-area {
+  flex: 1;
+  padding: 30px;
+}
+
+/* Top bar (if used in Dashboard/Profile) */
+.top-bar {
+  text-align: right;
+}
+
+.profile-btn {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Upload section (Image Upload page) */
+.upload-section {
+  margin-top: 50px;
+}
+
+/* Modal component (used for popups/alerts) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  min-width: 300px;
 }
