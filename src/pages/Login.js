@@ -10,14 +10,21 @@ const Login = () => {
   };
 
   return (
-    <div className="form-container">
-      <h2>Login</h2>
+    <div className="form-container fade-in">
+      <h2 className="form-title">Welcome Back 👋</h2>
+      <p className="form-subtitle">Login to continue your journey</p>
+
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
         <input type="password" placeholder="Password" required />
-        <button type="submit">Login</button>
+        <button type="submit" className="btn-primary">Login</button>
       </form>
-      <p onClick={() => navigate('/register')}>Don't have an account? Register</p>
+
+      <div className="divider">OR</div>
+
+      <p onClick={() => navigate('/register')} className="form-link">
+        Don’t have an account? <span>Register</span>
+      </p>
     </div>
   );
 };

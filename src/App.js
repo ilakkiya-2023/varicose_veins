@@ -7,6 +7,9 @@ import Precautions from './pages/Precautions';
 import Conditions from './pages/Conditions';
 import Treatment from './pages/Treatment';
 import Awareness from './pages/Awareness';
+import Teleconsultation from './pages/Teleconsultation';
+import Report from './pages/Report';
+import Meeting from './pages/Meeting';
 
 
 function App() {
@@ -16,11 +19,13 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/tele" element={<Teleconsultation/>}></Route>
+        <Route path="/meeting/:roomName" element={<Meeting />} />
         <Route path="/precautions" element={<Precautions />} />
+        <Route path="/report" element={<Report/>}></Route>
         <Route path="/conditions" element={<Conditions />} />
         <Route path="/treatment" element={<Treatment />} />
-        <Route path="/awareness" element={<Awareness />} /> 
-        
+        <Route path="/awareness" element={<Awareness />} />
       </Routes>
     </Router>
   );

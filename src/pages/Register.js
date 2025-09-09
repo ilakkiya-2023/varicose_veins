@@ -10,22 +10,28 @@ const Register = () => {
   };
 
   return (
-    <div className="form-container">
-      <h2>Register</h2>
+    <div className="form-container fade-in">
+      <h2 className="form-title">Create Account ✨</h2>
+      <p className="form-subtitle">Join us and take the first step</p>
+
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Name" required />
+        <input type="text" placeholder="Full Name" required />
         <input type="number" placeholder="Age" required />
         <select required>
-          <option value="">Gender</option>
+          <option value="">Select Gender</option>
           <option>Male</option>
           <option>Female</option>
           <option>Other</option>
         </select>
+        <input type="email" placeholder="Email" required />
         <input type="password" placeholder="Password" required />
         <input type="password" placeholder="Confirm Password" required />
-        <button type="submit">Register</button>
+        <button type="submit" className="btn-primary">Register</button>
       </form>
-      <p onClick={() => navigate('/')}>Already have an account? Login</p>
+
+      <p onClick={() => navigate('/')} className="form-link">
+        Already have an account? <span>Login</span>
+      </p>
     </div>
   );
 };
